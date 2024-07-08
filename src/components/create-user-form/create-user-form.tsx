@@ -109,6 +109,7 @@ function CreateUserForm() {
           onSubmit={handleSubmit(onSubmit)}
           className="p-5 grid grid-cols-2 gap-4"
         >
+          <p className="text-lg text-right font-bold col-span-2">Добавление пользователья</p>
           {fields.map((field) => {
             const errorMessage =
               errors[field.name as keyof CreateUserType]?.message;
