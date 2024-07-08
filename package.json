@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@material-tailwind/react": "^2.1.9",
+    "@reduxjs/toolkit": "^2.2.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,14 +13,21 @@
     "@types/node": "^16.18.101",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.2",
+    "json-server": "^1.0.0-beta.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.1",
+    "react-redux": "^9.1.2",
     "react-scripts": "5.0.1",
+    "react-table": "^7.8.0",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zod": "^3.23.8"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-server": "json-server --watch db.json --port 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
   }
 }
