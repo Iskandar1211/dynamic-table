@@ -1,7 +1,10 @@
 import "./App.css";
+import { InfiniteLoaderTable } from "./components/infiniti-loader-table/infiniti-loader-table";
 
 function App() {
-  return <div className="text-red-500">hello react</div>;
+  return <div>
+    <InfiniteLoaderTable/>
+  </div>
 }
 
 export default App;

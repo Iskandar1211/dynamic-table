@@ -1,0 +1,13 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "firstName": "Iskandar",
+            "lastName": "Gadoyboed",
+            "age": 32,
+            "visits": 2,
+            "progress": 50,
+            "status": "relationship"
+        }  
+    ]
+}
