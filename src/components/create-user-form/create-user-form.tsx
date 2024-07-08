@@ -7,7 +7,11 @@ import { CreateUserType, createUserSchema } from "../../validation/user-schema";
 
 function CreateUserForm() {
   const [open, setOpen] = useState(false);
-  const { register } = useForm<CreateUserType>({
+  const {
+    register,
+    formState: { errors },
+    watch,
+  } = useForm<CreateUserType>({
     mode: "onChange",
     resolver: zodResolver(createUserSchema),
   });
