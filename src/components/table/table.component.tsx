@@ -20,8 +20,11 @@ export function Table({
       <table className="w-full min-w-max table-auto text-left">
         <thead>
           <tr>
-            {columns.map((column) => (
-              <th className="border-b border-blue-gray-100 bg-blue-50 p-4">
+            {columns.map((column, i) => (
+              <th
+                key={i}
+                className="border-b border-blue-gray-100 bg-blue-50 p-4"
+              >
                 {column.Header}
               </th>
             ))}
@@ -33,7 +36,7 @@ export function Table({
             const isLast = i === data.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
             return (
-              <tr>
+              <tr key={i}>
                 <td className={classes}>{row.name}</td>
                 <td className={classes}>{row.username}</td>
                 <td className={classes}>{row.email}</td>
