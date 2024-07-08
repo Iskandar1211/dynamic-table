@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import { IData, Item } from "../types";
+import { IData, IUser } from "../types";
 
 export const fetchData = createAsyncThunk(
   "data/fetchData",
   async (page: number) => {
     const response = await axios.get(`http://localhost:3001/data?page=${page}`);
-    return response.data as Item[];
+    return response.data as IUser[];
   }
 );
 
@@ -29,7 +29,7 @@ export const dataSlice = createSlice({
       .addCase(fetchData.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(fetchData.fulfilled, (state, action: PayloadAction<Item[]>) => {
+      .addCase(fetchData.fulfilled, (state, action: PayloadAction<IUser[]>) => {
         state.status = "success";
         state.items.push(...action.payload);
       })

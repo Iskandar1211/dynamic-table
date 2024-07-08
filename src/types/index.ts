@@ -3,21 +3,31 @@ export interface IData {
   status: "idle" | "loading" | "success" | "failed";
   page: number;
 }
-
-export interface Item {
-  id?: string;
-  firstName: string;
-  lastName: string;
-  age: number;
-  visits: number;
-  progress: number;
-  status: "relationship" | "complicated" | "single";
+export interface IUser {
+  id?: number;
+  name: string;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    };
+  };
+  phone: string;
+  website: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
 }
 
 export interface IColumns {
   Header: string;
-  columns: {
-    Header: string;
-    accessor: string;
-  }[];
+  accessor: string;
 }

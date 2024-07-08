@@ -26,40 +26,35 @@ export const InfiniteLoaderTable = () => {
   const columns = useMemo(
     () => [
       {
-        Header: "Name",
-        columns: [
-          {
-            Header: "First Name",
-            accessor: "firstName",
-          },
-          {
-            Header: "Last Name",
-            accessor: "lastName",
-          },
-        ],
+        Header: "ФИО",
+        accessor: "name",
       },
       {
-        Header: "Info",
-        columns: [
-          {
-            Header: "Age",
-            accessor: "age",
-          },
-          {
-            Header: "Visits",
-            accessor: "visits",
-          },
-          {
-            Header: "Status",
-            accessor: "status",
-          },
-          {
-            Header: "Profile Progress",
-            accessor: "progress",
-          },
-        ],
+        Header: "Имя пользователья",
+        accessor: "username",
+      },
+      {
+        Header: "Почта",
+        accessor: "email",
+      },
+      {
+        Header: "Адрес",
+        accessor: "address",
+      },
+      {
+        Header: "Телефон",
+        accessor: "phone",
+      },
+      {
+        Header: "Сайт",
+        accessor: "website",
+      },
+      {
+        Header: "Компания",
+        accessor: "company",
       },
     ],
+
     []
   );
 
