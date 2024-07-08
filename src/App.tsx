@@ -1,9 +1,13 @@
-import React from "react";
+import { useEffect } from "react";
 import "./App.css";
 import CreateUserForm from "./components/create-user-form/create-user-form";
 import { InfiniteLoaderTable } from "./components/infiniti-loader-table/infiniti-loader-table";
 
 function App() {
+  useEffect(() => {
+    document.title = "Список пользователей";
+  }, []);
+
   return (
     <div className="container mx-auto">
       <CreateUserForm />
