@@ -5,7 +5,7 @@ import { IData, IUser } from "../types";
 export const fetchData = createAsyncThunk(
   "data/fetchData",
   async (page: number) => {
-    const response = await axios.get(`http://localhost:3001/data?page=${page}`);
+    const response = await axios.get(`http://localhost:3001/users?page=${page}`);
     return response.data as IUser[];
   }
 );

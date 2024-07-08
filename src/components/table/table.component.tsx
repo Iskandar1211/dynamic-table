@@ -40,10 +40,10 @@ export function Table({
                 <td className={classes}>{row.name}</td>
                 <td className={classes}>{row.username}</td>
                 <td className={classes}>{row.email}</td>
-                <td className={classes}>{row.address.city}</td>
+                <td className={classes}>{row.address}</td>
                 <td className={classes}>{row.phone}</td>
                 <td className={classes}>{row.website}</td>
-                <td className={classes}>{row.company.name}</td>
+                <td className={classes}>{row.company}</td>
               </tr>
             );
           })}
